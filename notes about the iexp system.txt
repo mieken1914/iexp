@@ -1,0 +1,31 @@
+This is an expert system that revolves around iPhone damages.
+The system asks the user for inputs about the damage in a form
+of a question and answer format. Once the Q&A is done,
+it will give a recommendation.
+
+This contains:
+-iexp folder (which is the system to be used)
+-iexpert_db.sql, a database export
+-and some screenshots
+
+Installation:
+1. Copy the "iexp" folder on the htdocs directory in your xampp folder.
+2. Import the "iexpert_db.sql" database file on mysql. This contains the 
+initial or starting database for the expert system.
+3. Open the Internet Explorer browser since this only works on this specific
+browser.
+4. Then inside the iexp folder, there is a file, "connect.php". Open this
+and change the $servername, $username and $password according to your pc's xampp mysql database
+credentials.
+**this is the text inside the file, connect.php:
+	$servername = "localhost";
+	$username = "root";
+   	$password = "";
+	$db_name = "iexpert_db";
+ 	$con = new mysqli($servername, $username, $password, $db_name) or die("Failed to connect to MySQL!" . mysql_error());
+
+
+
+default admin account:
+username: admin
+password: admin
